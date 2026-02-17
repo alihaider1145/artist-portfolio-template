@@ -1,1 +1,1 @@
-# artist-portfolio-template
+# thomas-windor-site
