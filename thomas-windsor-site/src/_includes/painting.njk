@@ -1,0 +1,35 @@
+---
+layout: base.njk
+---
+
+<div class="painting-page">
+    <h1 class="heading">{{ title }}</h1>
+    <div class="painting-container">
+        <div class="painting-img">
+            <img 
+            src="/.netlify/images?url={{ image }}&w=800&q=80" 
+            alt="{{ title }}"
+            loading="lazy"
+            >
+        </div>
+        
+        <div class="painting-info">            
+            <div class="painting-details">
+                <p class="price"><span>Price:</span> <span>${{ price }}</span></p>
+                <p class="size"><span>Size:</span> <span class="highlighted-text">{{ size }}</span></p>
+                <p class="medium"><span>Medium:</span> <span>{{ medium }}</span></p>
+                <p class="availability {{ availability | lower }}"><span>Availability:</span> <span class="highlighted-text">{{ availability }}</span></p>
+                <p class="description">
+                    <span>Description:</span> <span>{{ description }}</span>
+                </p>
+            </div>
+            
+            <div class="painting-actions">
+                {% if availability == "Available" %}
+                    <a href="#"><button class="btn-primary">Buy Now</button></a>
+                {% endif %}
+                <a href="/contact/"> <button class="btn-secondary">Contact for Details</button></a>
+            </div>
+        </div>
+    </div>
+</div>

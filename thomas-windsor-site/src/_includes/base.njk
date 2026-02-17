@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/reset.css" />
+    <link rel="stylesheet" href="/assets/css/variables.css" />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer></script>
+    <script src="assets/js/index.js" defer></script>
+    <title>Thomas Windsor Portfolio</title>
+</head>
+<body>
+    <header>
+<nav class="nav">
+  <div class="nav-container">
+    <a class="nav-link {{ 'highlighted-text' if page.url == '/' }}" href="/" {{ 'aria-current="page"' if page.url == '/' }}>Home</a>
+    <a class="nav-link {{ 'highlighted-text' if page.url == '/gallery/' }}" href="/gallery/" {{ 'aria-current=page' if page.url == '/gallery/' }}>Gallery</a>
+    <a class="nav-link {{ 'highlighted-text' if page.url == '/about/' }}" href="/about/" {{ 'aria-current=page' if page.url == '/about/' }}>About</a>
+    <a class="nav-link {{ 'highlighted-text' if page.url == '/contact/' }}" href="/contact/" {{ 'aria-current=page' if page.url == '/contact/' }}>Contact Us</a>
+  </div>
+</nav>
+
+    </header>
+    
+    <main>
+        {{ content | safe }}
+    </main>
+
+    <section class="social section">
+      <h2 class="social-heading heading">Follow Thomas Windsor</h2>
+      <div class="social-container container">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          href="https://www.instagram.com/thomaswindsorstudio/?hl=en"
+        >
+          <img
+            class="social-img"
+            src="/assets/images/instagram.png"
+            alt="Instagram"
+          />
+        </a>
+
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          href="https://www.youtube.com/@Thomas_Windsor"
+        >
+          <img
+            class="social-img"
+            src="/assets/images/youtube.png"
+            alt="Youtube"
+          />
+        </a>
+
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          href="https://www.facebook.com/thomaswindsorstudio/?locale=en_GB"
+        >
+          <img
+            class="social-img"
+            src="/assets/images/facebook.png"
+            alt="Facebook"
+          />
+        </a>
+
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          href="https://www.tiktok.com/@thomas_windsor"
+        >
+          <img
+            class="social-img"
+            src="/assets/images/tiktok.png"
+            alt="Tiktok"
+          />
+        </a>
+      </div>
+    </section>
+    
+    <footer>
+      <p>© 2026 Thomas Windsor</p>
+    </footer>
+</body>
+</html>

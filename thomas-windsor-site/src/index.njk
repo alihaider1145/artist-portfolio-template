@@ -1,0 +1,182 @@
+---
+permalink: /
+layout: base.njk
+isHomepage: true
+---
+
+<section class="hero section">
+  <div class="hero-container container">
+    <img
+      class="hero-image"
+      src="/.netlify/images?url=/assets/images/painting-therapy-hero-pic.jpg&w=800&q=80"
+      alt="Painting Therapy"
+    />
+    <div class="hero-info">
+      <h1 class="hero-title">Thomas Windsor</h1>
+      <p class="hero-text">Artist | Painting Therapy</p>
+    </div>
+  </div>
+</section>
+
+<section class="painting-therapy section">
+  <h2 class="painting-therapy-heading heading">
+    Painting <br />
+    <span>THERAPY</span>
+  </h2>
+  <div class="painting-therapy-container container">
+    <p class="painting-therapy-text">
+      <span class="highlighted-text">Painting</span> can be therapeutic
+      to watch. <br />
+      Join artist <span class="highlighted-text">Thomas Windsor</span> as
+      he shares his emotions and celebrates nature.
+    </p>
+    <h3 class="latest-episode-title">Latest Episode</h3>
+    <div class="video-container latest-episode-container">
+      <iframe
+        src="https://www.youtube.com/embed/k1onUZNmCxI?si=ZIEObV_ABPPcrSpQ"
+        title="YouTube video player"
+        frameborder="0"
+        allow="
+          accelerometer;
+          autoplay;
+          clipboard-write;
+          encrypted-media;
+          gyroscope;
+          picture-in-picture;
+          web-share;
+        "
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <a 
+    class="youtube-channel-btn btn-primary"
+    href="https://www.youtube.com/@Thomas_Windsor"
+    target="_blank"
+    rel="noopener noreferrer">
+      Free weekly episodes on YouTube!
+    </a>
+  </div>
+</section>
+
+<section class="featured-art section">
+  <h2 class="featured-art-heading heading">From the Studio</h2>
+  <div class="painting-grid container">
+    {% for painting in collections.paintings | reverse %}
+      {% if loop.index <= 4 %}
+        <div class="painting-card">
+          <img
+            class="painting-img"
+            src="/.netlify/images?url={{ painting.data.image }}&w=800&q=80"
+            alt="{{ painting.data.title }}"
+            loading="lazy"
+          />
+          <div class="painting-card-info">
+            <h3 class="painting-title">{{ painting.data.title }}</h3>
+            <p class="painting-price">${{ painting.data.price }}</p>
+          </div>
+          <a href="{{ painting.url }}" class="featured-art-btn btn-secondary">View Details</a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <a href="../gallery/" class="btn-primary">View More</a>
+</section>
+
+<section class="cards section">
+  <h2 class="card-heading heading">More than just paintings</h2>
+  <div class="card-container container">
+    <div class="card">
+      <img
+        class="card-img"
+        src="/.netlify/images?url=/assets/images/card-one.png&w=400&q=80"
+        alt="Card 1"
+        loading="lazy"
+      />
+      <h5 class="card-title">Painting Therapy</h5>
+      <p class="card-text">
+        A way to bring peace and happiness in your life.
+      </p>
+    </div>
+
+    <div class="card">
+      <img
+        class="card-img"
+        src="/.netlify/images?url=/assets/images/card-two.png&w=400&q=80"
+        alt="Card 1"
+        loading="lazy"
+      />
+      <h5 class="card-title">Support an Artist</h5>
+      <p class="card-text">
+        Your purchase directly supports an independent creator and his
+        craft.
+      </p>
+    </div>
+
+    <div class="card">
+      <img
+        class="card-img"
+        src="/.netlify/images?url=/assets/images/card-three.png&w=400&q=80"
+        alt="Card 1"
+        loading="lazy"
+      />
+      <h5 class="card-title">From Studio to Home</h5>
+      <p class="card-text">
+        Each painting is carefully packaged and shipped from Thomas's
+        studio.
+      </p>
+    </div>
+
+    <div class="card">
+      <img
+        class="card-img"
+        src="/.netlify/images?url=/assets/images/card-four.png&w=400&q=80"
+        alt="Card 1"
+        loading="lazy"
+      />
+      <h5 class="card-title">Created with Joy</h5>
+      <p class="card-text">AI can't enjoy making art.</p>
+    </div>
+  </div>
+</section>
+
+<section class="faq section">
+  <h2 class="faq-heading heading">Frequently Asked Questions</h2>
+  <div class="faq-container container">
+    <div class="faq-question">
+      <h5 class="faq-question-title">Q. What is Painting Therapy?</h5>
+      <p class="faq-question-answer">
+        Painting Therapy is a Youtube series that features artist Thomas
+        Windsor as he shares his emotions and celebrates nature through
+        art.
+      </p>
+    </div>
+
+    <div class="faq-question">
+      <h5 class="faq-question-title">Q. Do you ship internationally?</h5>
+      <p class="faq-question-answer">Yes! We do ship internationally!</p>
+    </div>
+
+    <div class="faq-question">
+      <h5 class="faq-question-title">
+        Q. Can I get commission on a custom paper?
+      </h5>
+      <p class="faq-question-answer">Yes! We do commission works!</p>
+    </div>
+
+    <div class="faq-question">
+      <h5 class="faq-question-title">Q. Will my paintings be signed?</h5>
+      <p class="faq-question-answer">
+        Yes! All of our paintings are signed by Thomas Windsor.
+      </p>
+    </div>
+
+    <div class="faq-question">
+      <h5 class="faq-question-title">Q. How long does shipping take?</h5>
+      <p class="faq-question-answer">
+        Shipping usually takes 3-7 days, depending on your location.
+      </p>
+    </div>
+  </div>
+</section>
+
