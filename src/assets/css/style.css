@@ -82,6 +82,11 @@ h6 {
   transition: transform 0.3s ease;
 }
 
+.btn-primary.sold{
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .btn-secondary {
   border-radius: 1rem;
   border: none;
@@ -354,7 +359,9 @@ footer {
 
 /* individual painting cms template */
 .painting-container {
-  display: flex;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   margin: 4rem;
   gap: 2rem;
   justify-content: center;
@@ -404,6 +411,10 @@ footer {
 /* Gallery Page */
 
 /* about */
+.about {
+  height: calc(100vh - 34rem);
+}
+
 .about-container {
   display: flex;
   justify-content: space-evenly;
