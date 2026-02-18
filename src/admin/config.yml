@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
-site_url: https://your-site.netlify.app       # ← update per client
-display_url: https://your-site.netlify.app    # ← update per client
+site_url: https://your-site.netlify.app # ← update per client
+display_url: https://your-site.netlify.app # ← update per client
 
 media_folder: 'src/assets/images/paintings'
 public_folder: 'assets/images/paintings'
